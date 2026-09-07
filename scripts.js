@@ -53,14 +53,15 @@ function convertCurrency(amount, price, symbol) {
     try {
         currencyInfo.textContent = `${symbol} 1 = ${convertToBRL(price)}`
 
-        let total = amount * price
-        result.textContent = total
+        let total = String(amount * price).replace(".", ",")
+        result.textContent = `${total} Reais`
 
         footer.classList.add("show-result")
+   
     } catch (error) {
         console.log(error)
     
-    z//remove a classe do footer  
+    //remove a classe do footer  
         footer.classList.remove("show-result")
         alert("Não foi possível converter")
     }

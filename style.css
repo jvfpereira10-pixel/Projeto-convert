@@ -100,32 +100,25 @@ label {
     flex-direction: column;
     margin-top: 44px;
 }
-.result {
-    display: flex;
-    flex-direction: column;
-    width: 480px;
-    height: 156px;
-    background-color: #1F2151;
+footer {
+    background-color: #1f2151;
+    padding: 2.5rem;
+    max-height: 196px;
 
-    border-radius: 0 0 24px 24px;
-    border: solid 1px #2F3279;
-    
-    margin-bottom: 24px;
-
-    color: #F1F2F6;
     text-align: center;
-    justify-content: center;
-    align-items: center;
+    display: none;
+
+    overflow-y: scroll;
 }
-span {
+
+.show-result {
+    display: block;
+}
+
+footer span {
+    color: #7d8dec;
+    font-size: 1rem;
     font-family: "IBM Plex Mono", monospace;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: normal;
-}
-h2 {
-    font-family: "Inter", sans-serif;
-    font-size: 32px;
-    line-height: 48px;
-    font-weight: bold;
+    margin-bottom: 0.5rem;
+    line-height: 1.25rem;
 }

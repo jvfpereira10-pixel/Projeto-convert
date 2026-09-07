@@ -39,7 +39,7 @@ h1 {
     align-items: center;
     flex-direction: column;
     
-    border-radius: 24px;
+    border-radius: 1.5rem;
     border: solid 1px;
     border-color: #2F3279;
 }
@@ -104,9 +104,11 @@ footer {
     background-color: #1f2151;
     padding: 2.5rem;
     max-height: 196px;
+    margin-top: 8px;
 
     text-align: center;
     display: none;
+    border-radius: 12px;
 
     overflow-y: scroll;
 }
@@ -121,4 +123,12 @@ footer span {
     font-family: "IBM Plex Mono", monospace;
     margin-bottom: 0.5rem;
     line-height: 1.25rem;
+}
+
+footer h2 {
+    color: #f1f2f6;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 3rem;
+    word-break: break-all;
 }

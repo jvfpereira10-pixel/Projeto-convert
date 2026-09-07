@@ -8,6 +8,9 @@ const ARS = 0.0034
 const money = document.getElementById("value-money")/*pegando o valor de input*/
 const selectCurrency = document.getElementById("currency") /*valor do select*/
 const form = document.querySelector("form")/*pegando o form*/
+const footer = document.querySelector("main footer")
+const currencyInfo = document.getElementById("currency-info")
+const result = document.getElementById("final-value")
 
 
 /* manipular o input pra receber apenas números */
@@ -45,5 +48,29 @@ form.onsubmit = function (event) {
 /*Function pra converter a moeda */
 
 function convertCurrency(amount, price, symbol) {
-    console.log(amount, price, symbol)
+    
+    //aplica a classe que exibe o footer
+    try {
+        currencyInfo.textContent = `${symbol} 1 = ${convertToBRL(price)}`
+
+        let total = amount * price
+        result.textContent = total
+
+        footer.classList.add("show-result")
+    } catch (error) {
+        console.log(error)
+    
+    z//remove a classe do footer  
+        footer.classList.remove("show-result")
+        alert("Não foi possível converter")
+    }
+}
+
+function convertToBRL(value){
+    return Number(value).toLocaleString("pt-BR", {
+
+        style: "currency",
+        currency:  "BRL",
+    })
+    
 }

@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto conversão de moedas</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
     <main>
-        <div class="values" id="convert"></div>
+        <h1>CONVERT</h1>
+        <div class="values" id="converts">
+            <div class="l-div">
+                <label>VALOR</label>
+                <form><input type="number" class="convert" id="value-money" min="0"></form>                
+            </div>
+            
+            <div class="l-div">
+                <label>MOEDA</label>
+                <select class="convert">
+                    <option value="">Selecione a moeda</option>
+                    <option value="USD">Dolar americano</option>
+                    <option value="EUR">Euro</option>
+                    <option value="JPY">Iene japonês</option>
+                    <option value="ARS">Peso argentino</option>
+                    <option value="CNY">Yuan chinês</option>
+                </select>
+            </div>
+            
+            <button class="btn">Converter em </button>
+        </div>
     </main>
 </body>
 </html>
